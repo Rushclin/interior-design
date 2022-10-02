@@ -1,95 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
-  maximum-scale=5"
-    />
 
-    <link rel="icon" href="devchallenges.png" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior</title>
 
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://devchallenges.io/"
-    />
+    <!--CUSTUM CSS-->
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <!--MATERIAL ICONS-->
+    <link rel="stylesheet" href="./assets/css/MaterialSymbolesRounded.css">
 
-    <title>Devchallenges</title>
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="./images/devchallenges.png" type="image/x-icon">
+</head>
 
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
+<body>
 
-      ul {
-        padding-left: 24px;
-      }
+    <header class="header active">
+        <div class="container">
+            <h1>
+                <a href="#" class="logo">This Interior</a>
+            </h1>
+            <button class="menu-toggle-btn icon-box" data-menu-toggle-btn aria-label="Toggle Menu">
+                <span class="material-symbols-rounded  icon">menu</span>
+            </button>
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-element active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="navbar-element">
+                        <a href="#">Collection</a>
+                    </li>
+                    <li class="navbar-element">
+                        <a href="#">About</a>
+                    </li>
+                    <li class="navbar-element">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-      li {
-        margin-bottom: 8px;
-      }
+    <section class="hero container">
+        <div class="hero-description">
+            <h1 class="hero-title">
+                Modern Interior
+            </h1>
+            <p class="hero-subtitle">
+                A full-Service residential & commercial interior design and staging company offering professional
+                organizing & eco-services.
+            </p>
 
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
+            <button class="btn btn-primary">
+                <span class="material-symbols-rounded  icon">arrow_back</span>
+                Read more
+            </button>
+        </div>
 
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
+        <div class="hero-image">
+            <div class="image">
+                <img src="./images/photo1.png" alt="">
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="./images/photo2.png" alt="Photo 2" width="70" height="70">
+                    <div class="card-description">
+                        <h3 class="card-title"> Aliza Webber</h3>
+                        <h3 class="card-subtitle">
+                            Interior designer
+                        </h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3>Designed in 2020 by Aliza Webber</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
-
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
-      </div>
-
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
+    <div class="attribution">
+        Challenge by <a href="" target="_blank">Dev Challenge</a>.
+        Coded by <a href="#">Rushclin Takam</a>.
     </div>
-  </body>
+
+
+    <!--JS FILE-->
+    <script src="./assets/js/script.js"></script>
+</body>
+
 </html>

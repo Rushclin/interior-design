@@ -5,4 +5,284 @@
     /* COLORS */
 
     --cool-black: #181719;
+    --withe: #FFFFFF;
+    --gray: #444048a1;
+
+
+    /* TYPOGRAPHYE */
+
+    --ff-montserat: 'Montserat';
+    --ff-lora: 'Lora';
+
+    --fw-500: 500;
+    --fw-700: 700;
+}
+
+/* IMPORT FONTS */
+@font-face {
+    font-family: 'Montserat';
+    src: url('./../fonts/Montserrat-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('./../fonts/Lora-Medium.ttf');
+}
+
+/* RESET */
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--withe);
+    background: var(--cool-black);
+    padding-top: 80px;
+    font-family: var(--ff-montserat);
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+button {
+    font: inherit;
+    border: none;
+    background: none;
+    cursor: pointer
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding-inline: 10px;
+}
+
+.btn {
+    padding: 10px;
+    justify-content: center;
+    align-self: center;
+    display: flex;
+}
+
+.btn-primary {
+    padding-top: 20px;
+    font-size: 14px;
+    color: var(--white)
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    background: var(--cool-black);
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+h1>.logo {
+    font-size: 18px;
+    font-family: var(--ff-lora);
+    border: solid 1px #FFFFFF;
+    padding: 5px;
+    text-transform: uppercase;
+    transition: 0.53s ease;
+}
+
+h1>.logo:is(:focus, :hover) {
+    padding: 5px 10px;
+    transition: 0.53s ease
+}
+
+.header>.container {
+    padding-inline: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    padding-block: 15px;
+}
+
+.navbar {
+    position: absolute;
+    top: -70px;
+    width: 100%;
+    height: 0;
+    display: flex;
+    background: var(--cool-black);
+    justify-content: center;
+    align-items: center;
+    /* visibility: hidden; */
+    transition: 0.53s ease;
+    z-index: 1;
+}
+
+.navbar-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-element {
+    padding: 10px 10px;
+    font-family: var(--ff-montserat);
+    font-weight: var(--fw-700);
+    transition: 0.53s ease
+}
+
+.navbar-element:is(:focus, :hover) {
+    border-bottom: solid 2px #FFFFFF;
+    transition: 0.53s ease
+}
+
+.navbar-element.active {
+    border-bottom: solid 2px #FFFFFF;
+}
+
+.navbar.active {
+    transition: 0.5s ease;
+    height: 100vh;
+    top: 70px;
+    z-index: 2;
+}
+
+/* HERO */
+
+.hero.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-description {
+    font-family: var(--ff-lora);
+    padding: 20px 0;
+}
+
+.hero-title {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-family: var(--ff-montserat);
+    font-weight: 400;
+    font-size: 14px;
+    width: 80%
+}
+
+.hero-image {
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.image>img {
+    width: 100%;
+    height: auto
+}
+
+.card {
+    padding: 20px;
+    position: relative;
+    top: -70px;
+    background: var(--cool-black);
+    width: 70%;
+    left: 100px;
+    box-shadow: 1px 1px 10px var(--gray);
+    z-index: 0;
+}
+
+.card-header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.card-description {
+    padding: 0 20px
+}
+
+.card-header>img {
+    border-radius: 50%;
+}
+
+.card-title {
+    font-size: 14px;
+    font-family: var(--ff-montserat);
+}
+
+.card-subtitle {
+    font-size: 12px;
+    font-family: var(--ff-montserat);
+    font-weight: 200;
+}
+
+.card-body {
+    font-family: var(--ff-lora);
+    padding-top: 20px;
+}
+
+.attribution {
+    font-family: var(--ff-poppins);
+    font-size: 10px;
+    text-align: center;
+    padding-top: 50px
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (min-width: 900px) {
+    .container {
+        padding-inline: 100px;
+    }
+
+    .menu-toggle-btn {
+        display: none;
+    }
+
+    .header>.container {
+        display: flex;
+        padding-inline: 100px;
+    }
+
+    .navbar {
+        visibility: visible;
+        height: unset;
+        width: unset;
+        position: inherit;
+        flex-direction: row;
+    }
+
+    .navbar-list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar-element {
+        padding: 10px 30px;
+    }
+
+    .navbar.active {
+        height: unset
+    }
+
+    /* HERO */
+
+    .hero.container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
